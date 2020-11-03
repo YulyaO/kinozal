@@ -1,0 +1,50 @@
+.navbar-inverse  {
+background-color: darken($color-dark, 4%);
+
+ .navbar-nav {
+
+    > .active > a {
+        background-color: $color-primary-dark;
+    
+         &:focus, 
+         &:hover {
+             background-color: $color-primary-light;
+         } 
+    } 
+
+    > li > a {
+        transition: background-color 0.5s;
+        @include sm-min {
+            border-radius: 4px;
+        }
+        border-radius: 4px;
+    
+        &:focus,
+        &:hover {
+        
+        background-color: $color-primary;
+        }
+     }
+   }
+}
+
+.navbar-left {
+    @include sm-min {
+        
+    }
+ @include sm {
+     margin-bottom: 0;
+ }
+   
+
+}
+.navbar-right {
+    @include sm {
+        margin-top: 0;
+    }
+
+    li {
+           margin: 5px 0 5px 5px;
+    }
+
+}

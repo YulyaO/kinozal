@@ -63,6 +63,11 @@ header, .main, .left-sidebar {
   border-radius: 0 0 4px 4px;
 }
 
+.input-lg,
+.input-group-lg > .form-control {
+  font-size: 0.875rem;
+}
+
 html {
   font-size: 16px;
   overflow-y: scroll;
@@ -71,6 +76,15 @@ html {
 body {
   font-size: 1rem;
   font-family: "PT Sans", sans-serif;
+}
+
+a {
+  color: #165690;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #df8a13;
 }
 
 .header-logo {
@@ -99,6 +113,121 @@ body {
 
 .left-sidebar .panel:last-of-type {
   margin-bottom: 0;
+}
+
+.vertical-slider {
+  border-radius: 4px;
+}
+
+.vertical-slider__image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.user-login {
+  position: relative;
+}
+
+.user-login__tabs {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  border: none;
+}
+
+.user-login__tabs a {
+  color: #dddddd;
+  border: none !important;
+  background-color: transparent !important;
+  padding: 14px 5px 11px !important;
+  color: #ffffff !important;
+}
+
+.site-news-item {
+  clear: both;
+  position: relative;
+}
+
+.site-news-item:not(:last-child) {
+  min-height: 85px;
+  margin-bottom: 15px;
+}
+
+.site-news-item:not(:last-child)::after {
+  right: 0;
+  bottom: -5px;
+  width: calc(100% - 85px);
+  content: "";
+  height: 1px;
+  background-color: #dddddd;
+}
+
+.site-news-item:hover a {
+  color: #df8a13;
+}
+
+.site-news__image {
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 75px;
+}
+
+.site-news__image:hover {
+  background-color: #df8a13;
+  border-color: #df8a13;
+}
+
+.site-news__title {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.site-news__date {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #909090;
+}
+
+.top-films__body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.top-films__list {
+  margin-bottom: 0;
+}
+
+.top-films__item {
+  background-color: transparent;
+  margin-right: -1px;
+  margin-left: -1px;
+  color: #165690 !important;
+}
+
+.top-films__item:first-child {
+  border-top: none;
+  border-radius: 0;
+}
+
+.top-films__item:last-child {
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.top-films__item:hover, .top-films__item:focus {
+  color: #ffffff;
+  background-color: #df8a13 !important;
+  border-color: #df8a13;
+}
+
+.top-films__item:hover .badge, .top-films__item:focus .badge {
+  background-color: #232323;
 }
 
 @media (min-width: 576px) {

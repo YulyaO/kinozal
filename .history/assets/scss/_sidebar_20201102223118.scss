@@ -1,0 +1,18 @@
+.left-sidebar {
+    @extend %matgin-bottom-lg;
+    
+    .panel:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.vertical-slider {
+    border-radius: 4px;
+
+    &__image {
+        width: 100%;
+        overflow: hidden;
+    
+    }
+}
+
+.user-

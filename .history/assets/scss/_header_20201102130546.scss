@@ -1,0 +1,21 @@
+.header {
+
+}
+
+
+
+.header-logo {
+
+    
+    &__title {
+        display: block;
+        color: $color-accent;
+        font-size: 3.5rem;
+        font-family: $font-header;
+
+    }
+
+    &__description {
+        display: block;
+    }
+}

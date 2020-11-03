@@ -1,0 +1,4 @@
+node_modules/
+temp/
+# IntellijIdea files
+.idea/

@@ -1,0 +1,55 @@
+.left-sidebar {
+    @extend %matgin-bottom-lg;
+    
+    .panel:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.vertical-slider {
+    border-radius: 4px;
+
+    &__image {
+        width: 100%;
+        overflow: hidden;
+    
+    }
+}
+
+.user-login {
+    position: relative;
+
+
+    &__tabs {
+   position: absolute;
+   top: 0;
+   right: 10px;
+   border: none;
+
+   a {
+    color: $color-gray;
+     border: none !important;
+     background-color: transparent !important;
+     padding: 14px 5px 11px !important;
+     color: $color-light !important;
+
+   }
+   
+ }
+}
+.site-news-item {
+    &__image {
+        m10
+        width: 75px;
+    }
+   
+    &__title {
+
+    }
+    &__date {
+
+    } 
+    
+}
+.thumbnail {
+    float: left;
+} 
