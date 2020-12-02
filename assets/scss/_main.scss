@@ -1,3 +1,114 @@
 .main {
    @extend %matgin-bottom-lg;
 }
+
+
+.site-search {
+margin-bottom: 45px;
+}
+.user-login {
+   margin-bottom: 60px;
+}
+
+.top-films,
+.new-films {
+   &__title {
+      
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         border-bottom: 3px solid $color-accent;
+         background: $color-accent;
+         width: 100%;
+         margin: 40px 0 0 15px;
+        
+
+      }
+   }
+}
+
+
+.top-films,
+.new-films {
+   overflow: hidden;
+   &-item {
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+      margin-bottom: $gap;
+
+      &__thumbnail {
+         margin-bottom: 0;
+    
+         &:hover,
+         &:focus {
+          background-color: $color-accent;
+          border-color: $color-accent;
+          color: $color-light;
+         }
+      }
+      &__image {
+       width: 100%;
+      }
+      &__title {
+         @include text-shortener;
+         margin: 0;
+         text-align: center;
+         font-size: 1rem;
+         font-weight: bold;
+        
+      }
+
+   }
+   
+   &-row {
+      margin-left: 7.5px;
+      margin-right: 7.5px;
+   }
+  
+}
+h2 {
+   position: relative;
+   margin-left: 65px;
+   &::before {
+      content: "";
+      position: absolute;
+      border-top: 3px solid $color-accent;
+      
+      background: $color-accent;
+      width: 30px;
+      margin: 10px 0px 0px -49px;
+      
+   }
+}
+.film-news {
+   &__image {
+      width: 100%;
+
+      &:hover {
+         background-color: $color-accent;
+         border-color: $color-accent;
+     }
+   }
+
+   &__text {
+      text-align: justify;
+   }
+   &:hover {
+      a {
+          color: $color-accent;   
+      }
+  }
+ 
+}
+
+.film-news-item {
+   &__button {
+     float: right;
+   }
+   }
+
+
+  
+  
