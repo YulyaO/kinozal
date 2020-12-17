@@ -1,3 +1,8 @@
+* {
+
+   box-sizing: border-box;
+}
+
 .main {
    @extend %matgin-bottom-lg;
 }
@@ -10,16 +15,16 @@ margin-bottom: 45px;
    margin-bottom: 60px;
 }
 
-.top-films,
 .new-films {
    &__title {
       
       position: relative;
+      
 
       &::after {
          content: "";
          position: absolute;
-         border-bottom: 3px solid $color-accent;
+         border-bottom: 3px solid rgba(240, 173, 79, 0.7);
          background: $color-accent;
          width: 100%;
          margin: 40px 0 0 15px;
@@ -28,10 +33,18 @@ margin-bottom: 45px;
       }
    }
 }
+.film-news,
+.top-films {
+   &__title {
+      position: relative;
+      padding-left: 40px;
+   }
+}
 
-
+.film-news,
 .top-films,
 .new-films {
+   
    overflow: hidden;
    &-item {
       padding-left: 7.5px;
@@ -68,46 +81,150 @@ margin-bottom: 45px;
    }
   
 }
-h2 {
-   position: relative;
-   margin-left: 65px;
-   &::before {
-      content: "";
-      position: absolute;
-      border-top: 3px solid $color-accent;
-      
-      background: $color-accent;
-      width: 30px;
-      margin: 10px 0px 0px -49px;
-      
-   }
+
+h2::before {
+   position: absolute;
+   left: 0;
+ 
+   width: 30px;
+   margin: 0.25em 0 0 0;
+ 
+   content: "";
+ 
+   border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+ }
+
+ h2::after {
+   position: absolute;
+ 
+   width: 100%;
+   margin: 0.85em 0 0 15px;
+ 
+   content: "";
+ 
+   border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+ }
+
+.film-news__title {
+   padding-top: 60px;
+   
 }
-.film-news {
-   &__image {
+.film-news-item .thumbnail {
+   &:hover {
+         background-color: #f0ad4f;
+         
+        }  
+}
+.film-news-item {
+&__title {
+   padding-top: 40px;
+}
+
+   img {
       width: 100%;
-
-      &:hover {
-         background-color: $color-accent;
-         border-color: $color-accent;
-     }
-   }
-
+}
    &__text {
       text-align: justify;
    }
    &:hover {
-      a {
-          color: $color-accent;   
+      
+     h3 > a  {
+          color: #df8a13;;   
       }
+     
   }
+    
+   .btn-warning {
+      float: right;
+      &:hover {
+         background-color: #df8a13;;
+      }
+   }
+   
+ }
  
-}
+ .video-title {
+   position: relative;
+   overflow: hidden;
 
-.film-news-item {
-   &__button {
-     float: right;
+   &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid $color-accent;
+      background: $color-accent;
+      width: 100%;
+      margin: 40px 0 0 15px;
+     
+
    }
-   }
+ }
+
+ .video-wrapper {
+    border: 1px solid #dddddd;
+ }
+
+ .text-item {
+    background-color: #f1f1f1;;
+    border: 1px solid #dddddd;
+    text-align: center;
+ }
+
+ .text-wrapper {
+   border-color: #dddddd;
+   background-color: #f1f1f1;
+   padding: 20px;
+
+ }
+
+ .text-content,
+ .review-title {
+    overflow: hidden;
+    padding-top: 100px;
+    position: relative;
+    padding-left: 40px;
+    font-size: 2.5rem;
+    
+      }
+
+ .review-item {
+    margin-bottom: auto;
+ }
+ .comments-title {
+   position: relative;
+   padding-left: 40px;
+   font-size: 2.5rem;
+   overflow: hidden;
+   padding-top: 50px;
+ }
+ .comments_form {
+ 
+    input {
+       width: 100%;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       margin-bottom: 15px;
+       height: 46px;
+       padding: 10px;
+       line-height: 1.42857143;
+       font-size: 14px;
+       color: #555;
+       
+    } 
+    textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #555;
+      padding: 10px;
+      line-height: 1.42857143;
+    }
+    
+ }
+ .comments__button {
+   float: right;
+ }
 
 
   

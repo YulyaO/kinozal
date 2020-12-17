@@ -1,6 +1,30 @@
-.footer container {
+.footer {
     background-color: $color-dark;
 }
 .footer__item {
     list-style: none;
+    padding-left: 0;
+    letter-spacing: 0.1 rem;
+    
+   a {
+    color: #777777;
+    &:hover{
+        color: white;
+    }
+}
+}
+h4 {
+    padding-top: 40px;
+   
+    color: white;
+}
+.footer-bottom {
+    a {
+        color: white;
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+       
+    }
 }
