@@ -26,13 +26,15 @@
    border: none;
 
    a {
-    color: $color-gray;
+    color: #dddddd !important;
      border: none !important;
      background-color: transparent !important;
      padding: 14px 5px 11px !important;
-     color: $color-light !important;
-
+     
    }
+   .active a {
+    color: #ffffff !important;
+  }
    
  }
 }
@@ -92,10 +94,13 @@
     &__body {
         padding-left: 0;
         padding-right: 0;
+        
     }
-    &__list {
-        margin-bottom: 0;
+    .list-group {
+      margin-bottom: 0;
     }
+    
+    
 
     &__item {
        background-color: transparent;

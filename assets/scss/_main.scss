@@ -2,6 +2,9 @@
 
    box-sizing: border-box;
 }
+body {
+   overflow-x:hidden;
+}
 
 .main {
    @extend %matgin-bottom-lg;
@@ -39,6 +42,10 @@ margin-bottom: 45px;
       position: relative;
       padding-left: 40px;
    }
+}
+
+.top-films__title {
+   padding-top: 60px;
 }
 
 .film-news,
@@ -82,26 +89,21 @@ margin-bottom: 45px;
   
 }
 
+
 h2::before {
    position: absolute;
    left: 0;
- 
    width: 30px;
    margin: 0.25em 0 0 0;
- 
    content: "";
- 
    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
  }
 
  h2::after {
    position: absolute;
- 
    width: 100%;
    margin: 0.85em 0 0 15px;
- 
    content: "";
- 
    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
  }
 
@@ -161,23 +163,42 @@ h2::before {
 
  .video-wrapper {
     border: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0 ;
+   
  }
 
  .text-item {
+   display: flex;
     background-color: #f1f1f1;;
     border: 1px solid #dddddd;
     text-align: center;
+    justify-content: center;
+    padding: 19px;
+    border-radius: 0 0 4px 4px;
+  
+ }
+ .text-item__wrapper {
+   text-align: center;
+   font-size: 1.2em;
+   &:not(:last-of-type) {
+      margin-right: 15px;
+   }
+ }
+ 
+ .text-item__badge {
+   font-size: 0.8em;
  }
 
- .text-wrapper {
+ .film-description__wrapper {
    border-color: #dddddd;
    background-color: #f1f1f1;
    padding: 20px;
+  
 
  }
 
- .text-content,
- .review-title {
+ .film-description,
+ .film-review__title {
     overflow: hidden;
     padding-top: 100px;
     position: relative;
@@ -186,17 +207,15 @@ h2::before {
     
       }
 
- .review-item {
-    margin-bottom: auto;
- }
- .comments-title {
+ 
+ .film-comments__title {
    position: relative;
    padding-left: 40px;
    font-size: 2.5rem;
    overflow: hidden;
    padding-top: 50px;
  }
- .comments_form {
+ .film-comments__form {
  
     input {
        width: 100%;
@@ -222,7 +241,7 @@ h2::before {
     }
     
  }
- .comments__button {
+ .film-comments__button {
    float: right;
  }
 

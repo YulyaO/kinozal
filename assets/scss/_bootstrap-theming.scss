@@ -76,7 +76,7 @@ background-color: darken($color-dark, 4%);
          .panel-heading {
             color: $color-light;
             background-color: $color-accent;
-            border-color: none;
+            border: none;
             font-size: 1.2rem;
             letter-spacing: 0.1em;
         }
