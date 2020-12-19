@@ -1,8 +1,7 @@
 %text-shadow {
-    text-shadow: 0 0 30px $color-black, 0 0 15px $color-black, 0 0 5px $color-black;
- 
-}
+    text-shadow: 0 0 5px darken($color-dark, 14%), 0 0 20px darken($color-dark, 14%);
+  }
 
-%matgin-bottom-lg {
+  %margin-bottom-lg {
     margin-bottom: 80px;
-}
+  }

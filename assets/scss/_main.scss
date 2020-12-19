@@ -1,250 +1,107 @@
-* {
-
-   box-sizing: border-box;
-}
-body {
-   overflow-x:hidden;
-}
-
 .main {
-   @extend %matgin-bottom-lg;
-}
-
-
-.site-search {
-margin-bottom: 45px;
-}
-.user-login {
-   margin-bottom: 60px;
-}
-
-.new-films {
-   &__title {
-      
-      position: relative;
-      
-
-      &::after {
-         content: "";
-         position: absolute;
-         border-bottom: 3px solid rgba(240, 173, 79, 0.7);
-         background: $color-accent;
-         width: 100%;
-         margin: 40px 0 0 15px;
-        
-
-      }
+   @extend %margin-bottom-lg;
+ 
+   .site-search {
+     margin-bottom: 45px;
    }
-}
-.film-news,
-.top-films {
-   &__title {
-      position: relative;
-      padding-left: 40px;
+ 
+   .user-login {
+     margin-bottom: 60px;
    }
-}
-
-.top-films__title {
-   padding-top: 60px;
-}
-
-.film-news,
-.top-films,
-.new-films {
-   
-   overflow: hidden;
-   &-item {
-      padding-left: 7.5px;
-      padding-right: 7.5px;
-      margin-bottom: $gap;
-
-      &__thumbnail {
-         margin-bottom: 0;
-    
-         &:hover,
-         &:focus {
-          background-color: $color-accent;
-          border-color: $color-accent;
-          color: $color-light;
-         }
-      }
-      &__image {
-       width: 100%;
-      }
-      &__title {
-         @include text-shortener;
-         margin: 0;
-         text-align: center;
-         font-size: 1rem;
-         font-weight: bold;
-        
-      }
-
-   }
-   
+ }
+ 
+ .new-films,
+ .top-week {
    &-row {
-      margin-left: 7.5px;
-      margin-right: 7.5px;
+     margin-right: -7.5px;
+     margin-bottom: -15;
+     margin-left: -7.5px;
    }
-  
-}
-
-
-h2::before {
-   position: absolute;
-   left: 0;
-   width: 30px;
-   margin: 0.25em 0 0 0;
-   content: "";
-   border-bottom: 3px solid rgba(240, 173, 79, 0.7);
- }
-
- h2::after {
-   position: absolute;
-   width: 100%;
-   margin: 0.85em 0 0 15px;
-   content: "";
-   border-bottom: 3px solid rgba(240, 173, 79, 0.7);
- }
-
-.film-news__title {
-   padding-top: 60px;
-   
-}
-.film-news-item .thumbnail {
-   &:hover {
-         background-color: #f0ad4f;
-         
-        }  
-}
-.film-news-item {
-&__title {
-   padding-top: 40px;
-}
-
-   img {
-      width: 100%;
-}
-   &__text {
-      text-align: justify;
-   }
-   &:hover {
-      
-     h3 > a  {
-          color: #df8a13;;   
-      }
-     
-  }
-    
-   .btn-warning {
-      float: right;
-      &:hover {
-         background-color: #df8a13;;
-      }
-   }
-   
- }
  
- .video-title {
-   position: relative;
-   overflow: hidden;
-
-   &::after {
-      content: "";
-      position: absolute;
-      border-bottom: 3px solid $color-accent;
-      background: $color-accent;
-      width: 100%;
-      margin: 40px 0 0 15px;
-     
-
-   }
- }
-
- .video-wrapper {
-    border: 1px solid #dddddd;
-    border-radius: 4px 4px 0 0 ;
-   
- }
-
- .text-item {
-   display: flex;
-    background-color: #f1f1f1;;
-    border: 1px solid #dddddd;
-    text-align: center;
-    justify-content: center;
-    padding: 19px;
-    border-radius: 0 0 4px 4px;
-  
- }
- .text-item__wrapper {
-   text-align: center;
-   font-size: 1.2em;
-   &:not(:last-of-type) {
-      margin-right: 15px;
-   }
- }
+   &-item {
+     margin-bottom: 15px;
+     padding-right: 7.5px;
+     padding-left: 7.5px;
  
- .text-item__badge {
-   font-size: 0.8em;
- }
-
- .film-description__wrapper {
-   border-color: #dddddd;
-   background-color: #f1f1f1;
-   padding: 20px;
-  
-
- }
-
- .film-description,
- .film-review__title {
-    overflow: hidden;
-    padding-top: 100px;
-    position: relative;
-    padding-left: 40px;
-    font-size: 2.5rem;
-    
-      }
-
+     &__thumbnail {
+       margin-bottom: 0;
  
- .film-comments__title {
-   position: relative;
-   padding-left: 40px;
-   font-size: 2.5rem;
-   overflow: hidden;
-   padding-top: 50px;
- }
- .film-comments__form {
+       transition: background-color 0.25s;
+     }
  
-    input {
+     &__image {
        width: 100%;
-       border: 1px solid #ccc;
-       border-radius: 4px;
-       margin-bottom: 15px;
-       height: 46px;
-       padding: 10px;
-       line-height: 1.42857143;
-       font-size: 14px;
-       color: #555;
-       
-    } 
-    textarea {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-bottom: 15px;
-      font-size: 14px;
-      color: #555;
-      padding: 10px;
-      line-height: 1.42857143;
-    }
-    
- }
- .film-comments__button {
-   float: right;
+     }
+ 
+     &__title {
+       margin: 0;
+ 
+       font-size: 1rem;
+       font-weight: bold;
+ 
+       @include text-shortener;
+     }
+ 
+     &__caption {
+       text-align: center;
+     }
+ 
+     &:hover {
+       .thumbnail {
+         border-color: $color-accent;
+         background-color: $color-accent;
+       }
+ 
+       h3 {
+         color: $color-light;
+       }
+     }
+   }
  }
 
-
-  
-  
+ 
+ 
+ .film-news {
+   &-item {
+     .thumbnail {
+       margin-bottom: 0;
+ 
+       transition: background-color 0.25s;
+     }
+ 
+     &__image {
+       width: 100%;
+     }
+ 
+     &__text {
+       text-align: justify;
+     }
+ 
+     &__button {
+       float: right;
+ 
+       margin-bottom: 30px;
+ 
+       transition: background-color 0.25s;
+     }
+ 
+     &:hover {
+       .thumbnail {
+         background-color: lighten($color-accent, 15%);
+       }
+ 
+       h3 > a {
+         color: $color-accent;
+       }
+ 
+       .btn-warning {
+         background-color: $color-accent;
+       }
+     }
+ 
+     h3 > a {
+       transition: color 0.25s;
+     }
+   }
+ }
+ 
